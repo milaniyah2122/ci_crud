@@ -1,9 +1,8 @@
 ul {
-
 	list-style: none;
 	padding: 0;
-    display: flex;
-    gap: 5px;
+	display: flex;
+	gap: 5px;
 }
 
 ul li {
@@ -15,28 +14,27 @@ ul li a {
 	text-decoration: none;
 	padding: 10px 15px;
 	display: block;
-	color: #FFFF;
+	color: #ffff;
 	background-color: #a1a1a1;
-    transition: all .3s;
+	transition: all 0.3s;
 }
 
 ul li a:hover {
-    color: black;
-    background-color: #ddd;
+	color: black;
+	background-color: #ddd;
 }
 
-.toggle-dropdown .dropdown{
-    display: none   ;
-    visibility: hidden;
-    transition: all .5s;
+.toggle-dropdown .dropdown {
+	display: none;
+	visibility: hidden;
+	transition: all 0.5s;
 }
 
 .toggle-dropdown .dropdown li {
-    display: block;
+	display: block;
 }
 
-.toggle-dropdown:hover .dropdown{
-    display: block;
-    visibility: visible;
+.toggle-dropdown:hover .dropdown {
+	display: block;
+	visibility: visible;
 }
-
