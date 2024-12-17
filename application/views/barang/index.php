@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barang</title>
 </head>
+
 <body>
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h3>Data Barang</h3>
+            <a href="<?= site_url('menu/tambah_barang') ?>">Tambah Barang</a>
         </div>
     </div>
     <div class="card-body">
@@ -25,7 +28,32 @@
                     <th>Aksi</th>
                 </tr>
             </thead>
+            <tbody>
+                <?php
+                $no = 1;
+                foreach ($TbBarang as $row):
+                ?>
+                    <tr>
+                        <td><?= $no++ ?></td>
+                        <td><?= $row->kode_brg ?></td>
+                        <td><?= $row->nama_brg ?></td>
+                        <td>Rp. <?= number_format($row->harga_beli, 0, ',', '.') ?></td>
+                        <td>Rp. <?= number_format($row->harga_jual, 0, ',', '.') ?></td>
+                        <td><?= $row->satuan_brg ?></td>
+                        <td><?= $row->stock_brg ?></td>
+                        <td>
+                            <a href="#">Edit</a>
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
         </table>
     </div>
+
+    <script>
+        console.log(<?php $barang ?>)
+    </script>
 </body>
+
 </html>
